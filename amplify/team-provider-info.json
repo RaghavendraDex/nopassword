@@ -1,0 +1,28 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-nopassword-dev-142223-authRole",
+            "UnauthRoleArn": "arn:aws:iam::755288588343:role/amplify-nopassword-dev-142223-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::755288588343:role/amplify-nopassword-dev-142223-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-nopassword-dev-142223-deployment",
+            "UnauthRoleName": "amplify-nopassword-dev-142223-unauthRole",
+            "StackName": "amplify-nopassword-dev-142223",
+            "StackId": "arn:aws:cloudformation:us-east-1:755288588343:stack/amplify-nopassword-dev-142223/ced614b0-e90b-11ea-b6b3-12f057d255e7",
+            "AmplifyAppId": "d1r2a5y2fezao8"
+        },
+        "categories": {
+            "function": {
+                "nopasswordCreateAuthChallenge": {
+                    "CHALLENGEANSWER": ""
+                },
+                "nopasswordDefineAuthChallenge": {},
+                "nopasswordPreSignup": {},
+                "nopasswordVerifyAuthChallengeResponse": {}
+            },
+            "auth": {
+                "nopassword": {}
+            }
+        }
+    }
+}

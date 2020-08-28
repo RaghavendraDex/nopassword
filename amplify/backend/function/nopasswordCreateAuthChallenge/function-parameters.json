@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "boilerplate-create-challenge"
+  ],
+  "parentResource": "nopassword",
+  "functionName": "nopasswordCreateAuthChallenge",
+  "resourceName": "nopasswordCreateAuthChallenge",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/Users/dexhigh/.config/yarn/global/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CreateAuthChallenge",
+  "triggerTemplate": "CreateAuthChallenge.json.ejs",
+  "roleName": "nopasswordCreateAuthChallenge",
+  "skipEdit": true,
+  "CHALLENGEANSWER": ""
+}
