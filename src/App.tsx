@@ -58,15 +58,16 @@ function App() {
         setSession(result);
         setMessage(WAITINGFOROTP);
       })
-      .catch((e) => {
-        if (e.code === 'UserNotFoundException') {
+      .catch((err) => {
+        if (err.code === 'UserNotFoundException') {
           signUp();
-        } else if (e.code === 'UsernameExistsException') {
+        } else if (err.code === 'UsernameExistsException') {
           setMessage(WAITINGFOROTP);
           signIn();
         } else {
-          console.log(e.code);
-          console.error(e);
+          setMessage(err.message);
+          console.log(err.code);
+          console.error(err);
         }
       });
   };
@@ -83,13 +84,17 @@ function App() {
   const verifyOtp = () => {
     Auth.sendCustomChallengeAnswer(session, otp)
       .then((user) => {
-        setUser(user);
-        setMessage(SIGNEDIN);
-        setSession(null);
+        if(user.signInUserSession){
+          setUser(user);
+          setMessage(SIGNEDIN);
+          setSession(null);
+        } else {
+          setMessage("Not Authenticated Try Again");
+        }
       })
       .catch((err) => {
         setMessage(err.message);
-        setOtp('');
+        //setOtp('');
         console.log(err);
       });
   };
